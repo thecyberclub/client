@@ -1,5 +1,5 @@
 (function($) {
-  
+
   "use strict";
 
   // Sticky Nav
@@ -11,19 +11,19 @@
         }
     });
 
-    /* 
+    /*
    One Page Navigation & wow js
    ========================================================================== */
     //Initiat WOW JS
     new WOW().init();
 
-    // one page navigation 
+    // one page navigation
     $('.main-navigation').onePageNav({
             currentClass: 'active'
-    }); 
+    });
 
     $(window).on('load', function() {
-       
+
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
@@ -39,7 +39,7 @@
 
     });
 
-    // Slick Nav 
+    // Slick Nav
     $('.mobile-menu').slicknav({
       prependTo: '.navbar-header',
       parentTag: 'span',
@@ -49,19 +49,19 @@
     });
 
 
-/* 
+/*
    CounterUp
    ========================================================================== */
     $('.counter').counterUp({
       time: 1000
     });
 
-/* 
+/*
    MixitUp
    ========================================================================== */
   $('#portfolio').mixItUp();
 
-/* 
+/*
    Touch Owl Carousel
    ========================================================================== */
     var owl = $(".touch-slider");
@@ -81,7 +81,7 @@
     $('.touch-slider').find('.owl-prev').html('<i class="fa fa-chevron-left"></i>');
     $('.touch-slider').find('.owl-next').html('<i class="fa fa-chevron-right"></i>');
 
-/* 
+/*
    Sticky Nav
    ========================================================================== */
     $(window).on('scroll', function() {
@@ -92,7 +92,7 @@
         }
     });
 
-/* 
+/*
    VIDEO POP-UP
    ========================================================================== */
     $('.video-popup').magnificPopup({
@@ -105,7 +105,7 @@
     });
 
 
-  /* 
+  /*
    SMOOTH SCROLL
    ========================================================================== */
     var scrollAnimationTime = 1200,
@@ -114,7 +114,7 @@
     $('a.scrollto').on('bind', 'click.smoothscroll', function (event) {
         event.preventDefault();
         var target = this.hash;
-        
+
         $('html, body').stop().animate({
             'scrollTop': $(target).offset().top
         }, scrollAnimationTime, scrollAnimation, function () {
@@ -122,7 +122,7 @@
         });
     });
 
-/* 
+/*
    Back Top Link
    ========================================================================== */
     var offset = 200;
@@ -144,7 +144,7 @@
     })
 
 /* Nivo Lightbox
-  ========================================================*/   
+  ========================================================*/
    $('.lightbox').nivoLightbox({
     effect: 'fadeScale',
     keyboardNav: true,
@@ -159,10 +159,9 @@
     responsive: true
   });
 
-/* 
+/*
    Page Loader
    ========================================================================== */
   $('#loader').fadeOut();
 
 }(jQuery));
-
