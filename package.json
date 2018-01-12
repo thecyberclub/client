@@ -2,9 +2,9 @@
   "name": "cyberclub",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "start": "http-server"
   },
   "author": "Pratheev, Kishore Kumar",
   "license": "ISC",
