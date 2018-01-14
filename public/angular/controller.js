@@ -9,6 +9,9 @@ angular.module('cyberclub.controller', ['cyberclub.services'])
 })
 
 .controller('MainCtrl', function($scope, $state){
+  $scope.forum = function() {
+    $state.go('forum');
+  };
 })
 
 .controller('ForumCtrl', function($scope, $state){

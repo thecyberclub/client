@@ -1,4 +1,4 @@
-<div class="bg">
+<!-- <div class="bg">
   <h4>Content Under Development!</h4>
 </div>
 <style>
@@ -13,4 +13,119 @@
   font-size: 28px;
   font-weight: 400;
 }
-</style>
+</style> -->
+<head>
+  <script src="lib/jquery.min.js"></script>
+  <link rel="stylesheet" href="materialize/css/materialize.css">
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="materialize/js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<div>
+  <nav class="nav-extended black-bg margin-btm-70">
+     <div class="nav-wrapper clearfix">
+       <a href="#" class="brand-logo logo">Forum</a>
+       <a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li> Welcome! </li>
+         <li><a ng-click="signin()">Sign in</a></li>
+         <li><a ng-click="signup()">Sign up</a></li>
+       </ul>
+       <ul class="side-nav" id="mobile-demo">
+         <li class="color-black"> Welcome Guest </li>
+         <li><a class="color-black" ng-click="signin()">Sign in</a></li>
+         <li><a class="color-black" ng-click="signup()">Sign up</a></li>
+       </ul>
+     </div>
+     <div class="nav-content">
+       <ul class="tabs white-bg">
+         <li class="padding-10 margin-left-66 color-black nav-element" ng-click="home()">Home</li>
+         <li class="padding-10 color-black nav-element">Ask a Question</li>
+         <!-- <li class="padding-10 color-black">JavaScript</li> -->
+       </ul>
+     </div>
+   </nav>
+   <div id="wrapper">
+     <div class="content">
+         <ul class="tabs tabs-line">
+           <li class="tab color-black"><a class="active color-black tab-font" href="#test1">Recent</a></li>
+           <li class="tab color-black"><a class="color-black tab-font" href="#test2">Unanswered</a></li>
+           <li class="tab color-black"><a class="color-black tab-font" href="#test3">Answered</a></li>
+           <hr>
+         </ul>
+         <div id="test1" class="col s12">
+           <br>
+           <div class="question_list">
+            <span class="question">1)angular.js validation error message</span>
+            <p>
+              <span><i class="fa fa-user"></i>&nbsp;Aksed by <b>anonymous</b></span>
+            </p>
+            <p>
+              <span>I have searched and followed the angular code for a long time and cant find where this error message is coming from. I know the validation works but my code only has this:</span>
+            </p>
+            <code>
+              &lt;span class="error" ng-show="myForm.input.$error.required"&gt;Required!&lt;/span&gt;
+            </code>
+            <p class="margin-top-30"><span class="font-weight-550">Answers</span></p>
+
+            <blockquote>
+              <p>
+                <span><i class="fa fa-user"></i>&nbsp;Answered by <b>anonymous</b></span>
+              </p>
+              <p>The browser is generating this message, because of HTML5 support of "type='email'".</p>
+            </blockquote>
+
+            <blockquote>
+              <p>
+                <span><i class="fa fa-user"></i>&nbsp;Answered by <b>anonymous</b></span>
+              </p>
+              <p>you can add 'novalidate' in form to disable native HTML5 validation.</p>
+              <code>
+                &lt;form name="form" class="css-form" novalidate&gt;
+              </code>
+            </blockquote>
+           </div>
+         </div>
+
+
+         <div id="test2" class="col s12">
+           <p>
+             Unanswered
+           </p>
+         </div>
+
+
+         <div id="test3" class="col s12">
+          <p>
+            Answered
+          </p>
+         </div>
+   </div>
+
+   <div class="sidebar">
+     <a class="yellow-bg waves-light btn ask-btn"><i class="fa fa-plus left"></i>Ask a question</a>
+     <br>
+
+     <div class="col s12 m12">
+       <div class="card">
+        <div class="card-content">
+          <div class="input-field col s6">
+            <input placeholder="" id="user_name" type="text" class="validate">
+            <label for="user_name" ng-model="user.user_name">User Name</label>
+          </div>
+         <div class="input-field col s12">
+           <input placeholder="" id="password" type="password" class="validate">
+           <label for="password" ng-model="user.password">Password</label>
+         </div>
+         <br>
+         <a class="yellow-bg waves-light btn t-center">Sign in</a>
+        </div>
+       </div>
+     </div>
+
+   </div>
+  </div>
+
+
+</div>
