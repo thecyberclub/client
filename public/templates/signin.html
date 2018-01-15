@@ -1,0 +1,35 @@
+<head>
+  <script src="lib/jquery.min.js"></script>
+  <link rel="stylesheet" href="materialize/css/materialize.css">
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="materialize/js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<div class="bg">
+  <div class="login-center">
+    <div class="login-card z-depth-5 t-center">
+
+      <!-- <img class="img-center" alt="Crossover"> -->
+      <div>
+        <h4 class="t-center cyber-text">Cyber Club</h4>
+        <!-- <h7>to continue to Forum</h7> -->
+        <h6 class="t-left font-serif">Sign in to continue to Forum</h6>
+      </div>
+
+      <div class="margin-top-65">
+        <div class="input-field col s12 email-field padding-lr-0">
+          <input id="username" type="text" ng-model="data.username" class="validate input-width change-color" autofocus>
+          <label for="username">Username</label>
+        </div>
+        <div class="input-field col s12 email-field padding-lr-0">
+          <input id="password" type="password" ng-model="data.password" class="validate input-width change-color" ng-keydown="pwdEvent()">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="inline-block margin-top-60">
+        <a class="waves-effect waves-light btn btn-color btn-text tile-case"  ng-click="login()">Signin</a>
+      </div>
+      <p class="t-center t-red" ng-show="isInvalid">Invalid Credentials!</p>
+    </div>
+  </div>
+</div>

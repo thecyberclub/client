@@ -15,4 +15,21 @@ angular.module('cyberclub.controller', ['cyberclub.services'])
 })
 
 .controller('ForumCtrl', function($scope, $state){
+  $scope.home = function() {
+    $state.go('home');
+  };
+  $scope.signin = function() {
+    $state.go('signin');
+  };
+  $scope.signup = function() {
+    $state.go('signup');
+  };
+})
+
+.controller('SigninCtrl', function($scope, $state){
+
+})
+
+.controller('SignupCtrl', function($scope, $state){
+
 })
