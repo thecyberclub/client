@@ -143,7 +143,14 @@ code {
 }
 
 blockquote {
-  border-left: 5px solid #f5c142 !important;
+  border-left: 5px solid #61D2B4 !important;
+  /* border-left: 5px solid #f5c142 !important; */
+}
+
+.blue-bg {
+  background-color:  #61D2B4 !important;
+  border-radius: 30px;
+  border: 1px solid #61D2B4;
 }
 
 .t-center {
@@ -302,9 +309,14 @@ blockquote {
 
   .sidebar {
     padding-top: 20px !important;
-    width: 30%;
+    width: 100vw !important;
     float: none;
     clear: both;
+  }
+
+  .input-field {
+      position: relative;
+      margin-top: 2rem !important;
   }
 
   .margin-left-66 {

@@ -5063,7 +5063,8 @@ small {
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
   /* color: #ee6e73; */
-  color: #f5c142 !important;
+  /* color: #f5c142 !important; */
+  color: #61D2B4 !important;
 }
 
 .tabs .tab.disabled a,
@@ -5077,7 +5078,8 @@ small {
   bottom: 0;
   height: 2px;
   /* background-color: #f6b2b5; */
-  background-color: #f5c142;
+  /* background-color: #f5c142; */
+  background-color: #61D2B4 !important;
   will-change: left, right;
 }
 
