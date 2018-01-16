@@ -1238,7 +1238,7 @@ footer {
 
 .copyright {
   margin-top: 10px;
-  float: right;
+  /* float: right; */
 }
 
 .copyright p {
@@ -1360,13 +1360,21 @@ footer {
 
 @media only screen and (max-width: 600px) {
     .carousel-1{
-      width: 90% !important;
+      width: 70% !important;
       height: 240px !important;
     }
 
     .res-img{
       height: 240px;
-      width: 260px;
+      width: 360px;
+    }
+
+    .flickity-prev-next-button.previous {
+      left: 0px !important;
+    }
+
+    .flickity-prev-next-button.next {
+      right: 0px !important;
     }
 
     .flickity-prev-next-button{
