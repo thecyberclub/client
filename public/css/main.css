@@ -537,7 +537,8 @@ button:focus {
   }
   .navbar-brand {
     position: absolute;
-    padding: 15px;
+    padding: 10px;
+    left: -10vw;
     top: 0;
   }
   .navbar-brand img {
@@ -1250,4 +1251,138 @@ footer {
 
 .copyright p a:hover {
   color: #61D2B4;
+}
+
+
+.slide-bg {
+  background: #fff;
+}
+
+.event-centre{
+  display: block !important;
+  margin: auto !important;
+}
+
+
+
+.carousel-1 {
+  overflow: hidden;
+  position: relative;
+  width: 54% !important;
+  height: 400px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.carousel-1.carousel-slider {
+  top: 0;
+  left: 0;
+}
+
+.carousel-1.carousel-slider .carousel-fixed-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.carousel-1.carousel-slider .carousel-fixed-item.with-indicators {
+  bottom: 68px;
+}
+
+.carousel-1.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-1.carousel-slider .carousel-item h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.carousel-1.carousel-slider .carousel-item p {
+  font-size: 15px;
+}
+
+.carousel-1 .carousel-item {
+  display: none;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-1 .carousel-item > img {
+  width: 100%;
+}
+
+.carousel-1 .indicators {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.carousel .indicators .indicator-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 24px 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  border-radius: 50%;
+}
+
+.carousel .indicators .indicator-item.active {
+  background-color: #fff;
+}
+
+.carousel.scrolling .carousel-item .materialboxed,
+.carousel .carousel-item:not(.active) .materialboxed {
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel-1{
+      width: 90% !important;
+      height: 240px !important;
+    }
+
+    .res-img{
+      height: 240px;
+      width: 260px;
+    }
+
+    .flickity-prev-next-button{
+      background: transparent !important;
+    }
+
+    .flickity-prev-next-button:hover{
+      background: transparent !important;
+    }
+
+    .flickity-prev-next-button .arrow {
+      fill: #33b391 !important;
+    }
+
+    .flickity-prev-next-button:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px #fff;
+    }
 }

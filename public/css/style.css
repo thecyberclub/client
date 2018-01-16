@@ -323,6 +323,12 @@ blockquote {
     margin-left: 6px !important;
   }
 
+  .ask-btn{
+    display: block;
+    margin: auto;
+    width: 52%;
+  }
+
   .login-card {
     height: 80vh;
     width: 98vw;

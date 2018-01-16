@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/flickity.css">
 
   <script src="js/jquery-min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -31,6 +32,7 @@
   <script src="js/form-validator.min.js"></script>
   <script src="js/contact-form-script.js"></script>
   <script src="js/main.js"></script>
+  <script src="lib/flickity.js"></script>
 </head>
 <div>
     <!-- Header Section Start -->
@@ -373,26 +375,20 @@
             See some of the events we've conducted recently.
           </p>
         </div>
-        <div class="row">
-          <!-- <div class="col-md-12">
-            <div class="controls text-center">
-              <a class="filter active btn btn-common" data-filter="all">
-                All
-              </a>
-              <a class="filter btn btn-common" data-filter=".design">
-                Design
-              </a>
-              <a class="filter btn btn-common" data-filter=".development">
-                Development
-              </a>
-              <a class="filter btn btn-common" data-filter=".print">
-                Print
-              </a>
-            </div>
-          </div> -->
-
+        <!-- <div class="row"> -->
           <!-- Portfolio Recent Projects -->
-          <div id="portfolio" class="row">
+
+          <div class="carousel-1 slide-bg js-flickity event-centre z-depth-5" data-flickity='{ "autoPlay": true, "imagesLoaded": true}'>
+             <img class="res-img" src="events/1.jpg" alt="events">
+             <img class="res-img" src="events/2.jpg" alt="events">
+             <img class="res-img" src="events/3.jpg" alt="events">
+             <img class="res-img" src="events/4.jpg" alt="events">
+             <img class="res-img" src="events/5.jpg" alt="events">
+             <img class="res-img" src="events/6.jpg" alt="events">
+             <img class="res-img" src="events/7.jpg" alt="events">
+         </div>
+
+          <!-- <div id="portfolio" class="row">
             <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development print">
               <div class="portfolio-item">
                 <div class="shot-item">
@@ -423,9 +419,9 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
       <!-- Container Ends -->
     </section>
     <!-- Portfolio Section Ends -->
@@ -439,7 +435,7 @@
           <!-- Footer Links -->
           <div class="col-lg-6 col-sm-6 col-xs-12 block-center">
             <div class="copyright">
-              <p text-center>All rights reserved &copy; 2018 - <a rel="nofollow" href="http://sairam.edu.in">Sri Sairam Engineering College</a></p>
+              <p class="text-center">&copy; 2018 <a rel="nofollow" href="http://sairam.edu.in">Sri Sairam Engineering College </a>- All rights reserved</p>
             </div>
           </div>
         </div>

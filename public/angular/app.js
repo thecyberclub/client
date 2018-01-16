@@ -16,6 +16,12 @@ cyberclub.config(function($stateProvider, $urlRouterProvider) {
  controller: 'MainCtrl'
 })
 
+.state('development', {
+ url: '/development',
+ templateUrl: 'templates/development.html',
+ controller: 'DevelopmentCtrl'
+})
+
 .state('signin', {
  url: '/signin',
  templateUrl: 'templates/signin.html',
