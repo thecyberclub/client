@@ -10,7 +10,7 @@ angular.module('cyberclub.controller', ['cyberclub.services'])
 
 .controller('MainCtrl', function($scope, $state){
   $scope.forum = function() {
-    $state.go('development');
+    $state.go('forum');
   };
 })
 
@@ -30,6 +30,19 @@ angular.module('cyberclub.controller', ['cyberclub.services'])
   $scope.signup = function() {
     $state.go('signup');
   };
+
+  //ngQuill
+  $scope.title = '';
+  $scope.changeDetected = false;
+
+  $scope.editorCreated = function (editor) {
+      // console.log(editor);
+  };
+  $scope.contentChanged = function (editor, html, text) {
+    	$scope.changeDetected = true;
+      // console.log('editor: ', editor, 'html: ', html, 'text:', text);
+  };
+
 })
 
 .controller('SigninCtrl', function($scope, $state){

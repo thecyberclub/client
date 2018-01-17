@@ -1,9 +1,10 @@
 'use strict'
 
-var cyberclub = angular.module('cyberclub',['ui.router','cyberclub.controller','cyberclub.services']);
-cyberclub.config(function($stateProvider, $urlRouterProvider) {
- $stateProvider
+var cyberclub = angular.module('cyberclub',['ui.router','ngQuill','cyberclub.controller','cyberclub.services']);
+cyberclub.config(function($stateProvider, $urlRouterProvider, ngQuillConfigProvider) {
+  // ngQuillConfigProvider.set();
 
+ $stateProvider
  .state('splash', {
   url: '/splash',
   templateUrl: 'templates/splash.html',

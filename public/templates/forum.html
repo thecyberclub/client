@@ -25,7 +25,7 @@
      <div class="nav-content">
        <ul class="white-bg">
          <li><a href="#" class="padding-10 margin-left-66 color-black nav-element">Home</a></li>
-         <li><a href="" class="padding-10 color-black nav-element" ng-click="askQuestion()">Ask a Question</a></li>
+         <li><a href="" class="padding-10 color-black nav-element modal-trigger" data-target="question" modal>Ask a Question</a></li>
          <!-- <li class="padding-10 color-black">JavaScript</li> -->
        </ul>
      </div>
@@ -33,12 +33,12 @@
    <div id="wrapper">
      <div class="content">
          <ul class="tabs tabs-line">
-           <li class="tab color-black"><a class="active color-black tab-font" href="#test1">Recent</a></li>
-           <li class="tab color-black"><a class="color-black tab-font" href="#test2">Unanswered</a></li>
-           <li class="tab color-black"><a class="color-black tab-font" href="#test3">Answered</a></li>
+           <li class="tab color-black"><a class="active color-black tab-font" href="#recent">Recent</a></li>
+           <li class="tab color-black"><a class="color-black tab-font" href="#unanswered">Unanswered</a></li>
+           <li class="tab color-black"><a class="color-black tab-font" href="#answered">Answered</a></li>
            <hr>
          </ul>
-         <div id="test1" class="col s12">
+         <div id="recent" class="col s12">
            <br>
            <div class="question_list">
             <span class="question">1)angular.js validation error message</span>
@@ -69,18 +69,23 @@
                 &lt;form name="form" class="css-form" novalidate&gt;
               </code>
             </blockquote>
+            <br>
+            <ng-quill-editor ng-model="title" on-editor-created="editorCreated(editor)" placeholder="Post your answer here...." on-content-changed="contentChanged(editor, html, text)"></ng-quill-editor>
+            <a class="blue-bg waves-light btn tile-case post-btn"  ng-click="post()">Post Your Answer</a>
+            <br><br>
            </div>
+<br><br><br>
          </div>
 
 
-         <div id="test2" class="col s12">
+         <div id="unanswered" class="col s12">
            <p>
              Unanswered
            </p>
          </div>
 
 
-         <div id="test3" class="col s12">
+         <div id="answered" class="col s12">
           <p>
             Answered
           </p>
@@ -88,7 +93,7 @@
    </div>
 
    <div class="sidebar">
-     <a class="blue-bg waves-light btn ask-btn"><i class="fa fa-plus left"></i>Ask a question</a>
+     <a class="blue-bg waves-light btn ask-btn modal-trigger" data-target="question" modal><i class="fa fa-plus left"></i>Ask a question</a>
      <br>
 
      <div class="col s12 m12">
@@ -109,6 +114,19 @@
      </div>
 
    </div>
+  </div>
+
+
+  <div id="question" class="modal black-text">
+    <div class="modal-content">
+      <h4 class="black-text text-center f-size-1-2 sans-serif"><b>Post your queries here!</b></h4>
+      <ng-quill-editor ng-model="title" on-editor-created="editorCreated(editor)" placeholder="Type your question here...." on-content-changed="contentChanged(editor, html, text)"></ng-quill-editor>
+    </div>
+
+    <div class="modal-footer">
+      <a id="projects" class="modal-btn modal-action modal-close blue-bg waves-effect waves-red btn-flat">Close</a> &nbsp;
+      <a class="modal-btn modal-action modal-close blue-bg waves-effect waves-red btn-flat">Post</a>
+    </div>
   </div>
 
 
